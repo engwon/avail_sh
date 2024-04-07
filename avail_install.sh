@@ -2,6 +2,7 @@
 
 
 pm2 stop availd && pm2 delete availd
+mv config.yml /root/avail-light/
 
 tee /etc/systemd/system/availd.service > /dev/null << EOF
 [Unit]
