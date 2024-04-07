@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
 pm2 stop availd && pm2 delete availd
-mv config.yml /root/avail-light/
+wget "https://raw.githubusercontent.com/engwon/avail_sh/main/config.yml"
+mv config.yml ~/avail-light
 
 tee /etc/systemd/system/availd.service > /dev/null << EOF
 [Unit]
