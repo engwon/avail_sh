@@ -1,3 +1,5 @@
+#!/bin/bash
+
 pm2 stop availd && pm2 delete availd
 wget "https://raw.githubusercontent.com/engwon/avail_sh/main/config.yml"
 mv config.yml ~/avail-light
